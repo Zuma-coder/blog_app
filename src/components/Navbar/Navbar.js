@@ -33,7 +33,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/create_note">
+            <Link to={isAuth ? "/create_note" : "/login"}>
               <FontAwesomeIcon icon={faPen} />
               記事を投稿
             </Link>

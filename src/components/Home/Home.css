@@ -1,0 +1,44 @@
+.home-container {
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .item-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    .item {
+      background-color: #f3d3b5;
+      box-shadow: 5px 5px 20px 0px #777777;
+      border-radius: 10px;
+      padding: 16px;
+      height: 300px;
+      overflow: scroll;
+      margin-bottom: 40px;
+
+      h2 {
+        text-align: center;
+        margin: 0 0 10px 0;
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          color: rgb(96, 88, 88);
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        button {
+          background-color: red;
+          color: white;
+        }
+      }
+    }
+  }
+}

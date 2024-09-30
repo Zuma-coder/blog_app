@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import { collection, addDoc } from "firebase/firestore";
 import { auth, db } from "../../firebase";
 import { useNavigate } from "react-router-dom";
+import "./CreateNote.css";
 
 const CreateNote = () => {
   const navigate = useNavigate();
@@ -24,24 +25,26 @@ const CreateNote = () => {
   return (
     <>
       <Navbar />
-      <div className="createNoteContainer">
-        <h1>新しい記事</h1>
-        <div className="inputArea">
-          <span>タイトル</span>
-          <input
-            type="text"
-            id="title"
-            onChange={(e) => setText(e.target.value)}
-          />
+      <div className="main-content">
+        <div className="create-note-container">
+          <h1>新しい記事</h1>
+          <div className="input-area">
+            <span>タイトル</span>
+            <input
+              type="text"
+              id="title"
+              onChange={(e) => setText(e.target.value)}
+            />
+          </div>
+          <div className="input-area">
+            <span>内容</span>
+            <textarea
+              id="description"
+              onChange={(e) => setDescription(e.target.value)}
+            ></textarea>
+          </div>
+          <button onClick={submit}>登録</button>
         </div>
-        <div className="inputArea">
-          <span>内容</span>
-          <textarea
-            id="description"
-            onChange={(e) => setDescription(e.target.value)}
-          ></textarea>
-        </div>
-        <button onClick={submit}>登録</button>
       </div>
     </>
   );

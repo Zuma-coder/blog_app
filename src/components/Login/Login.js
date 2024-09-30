@@ -19,8 +19,10 @@ const Login = () => {
   return (
     <>
       <Navbar />
-      <p>ログインして始める</p>
-      <button onClick={login}>ログイン</button>
+      <div className="main-content">
+        <p>ログインして始める</p>
+        <button onClick={login}>ログイン</button>
+      </div>
     </>
   );
 };
